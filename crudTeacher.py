@@ -8,7 +8,7 @@ import time
 
 class CrudTeacher(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f"{path}\data\teachers.json")
+        self.json_file = JsonFile(f"{path}\data\ teachers.json")
         self.valida = Valida()
 
     def create(self):

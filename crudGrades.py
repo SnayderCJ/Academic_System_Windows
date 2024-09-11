@@ -31,7 +31,7 @@ class CrudGrades(Icrud):
 
         # Obtener periodo, profesor y asignatura, asegúrate de validar que existan
         periodos_data = JsonFile(f'{path}\data\periods.json').read()
-        profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+        profesores_data = JsonFile(f'{path}\data\ teachers.json').read()
         asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
         # Mostrar periodos disponibles (solo los activos)
@@ -141,7 +141,7 @@ class CrudGrades(Icrud):
         if grade_dict:
             # Obtener periodo, profesor y asignatura, asegúrate de validar que existan
             periodos_data = JsonFile(f'{path}\data\periods.json').read()
-            profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+            profesores_data = JsonFile(f'{path}\data\ teachers.json').read()
             asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
 
@@ -275,7 +275,7 @@ class CrudGrades(Icrud):
 
         # Obtener datos de periodos, profesores y asignaturas para mostrar nombres en lugar de IDs
         periodos_data = JsonFile(f'{path}\data\periods.json').read()
-        profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+        profesores_data = JsonFile(f'{path}\data\ teachers.json').read()
         asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
         while True:
@@ -313,7 +313,7 @@ class CrudGrades(Icrud):
                 id = self.valida.solo_numeros("Ingrese el ID del registro a buscar: ", "ID inválido. Ingrese un número entero positivo.", 0, 5)
                 grade_dict = next((g for g in data if g['_id'] == int(id)), None)
                 if grade_dict:
-                    print(f"\nID: {grade_dict['_id']}, Periodo: {grade_dict['_periodo_id']}, Profesor: {grade_dict['_profesor_id']}, Asignatura: {grade_dict['_asignatura_id']}")
+                    print(f"\n {cyan_color}ID: {grade_dict['_id']}, Periodo: {grade_dict['_periodo_id']}, Profesor: {grade_dict['_profesor_id']}, Asignatura: {grade_dict['_asignatura_id']} {reset_color}")
                     for detalle in grade_dict['_detalleNota']:
                         estudiantes_data = JsonFile(f'{path}\data\students.json').read()
                         estudiante_data = next((s for s in estudiantes_data if s['_cedula'] == detalle['_estudiante']['_cedula']), None)  
