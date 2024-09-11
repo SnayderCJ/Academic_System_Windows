@@ -1,0 +1,91 @@
+<mxfile host="65bd71144e">
+    <diagram id="fUROWqU4duQ2HjBt7lLf" name="Página-1">
+        <mxGraphModel dx="1812" dy="616" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="2" value="Nota" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="30" width="220" height="136" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="id: int&lt;br&gt;periodo: Periodo&lt;br&gt;profesor: Profesor&lt;br&gt;asignatura: Asignatura&lt;br&gt;detalleNota: list[DetalleNota]&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="2">
+                    <mxGeometry y="26" width="220" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="addNota(): void" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="1">
+                    <mxGeometry x="270" y="166" width="220" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" style="edgeStyle=none;html=1;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" edge="1" parent="1" source="18" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="Periodo" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="-100" y="271" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="id: int&lt;br&gt;periodo: str&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="18">
+                    <mxGeometry y="26" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="18">
+                    <mxGeometry y="96" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" style="edgeStyle=none;html=1;entryX=0.295;entryY=1.042;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="21" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="Asignatura" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="150" y="271" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="id: int&lt;br&gt;descripcion: str&lt;br&gt;nivel: NIvel&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="21">
+                    <mxGeometry y="26" width="220" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="21">
+                    <mxGeometry y="116" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=none;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="24" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="Profesor" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="414" y="271" width="220" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="id: int&lt;br&gt;descripcion: str&lt;br&gt;nivel: NIvel&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="24">
+                    <mxGeometry y="26" width="220" height="90" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="24">
+                    <mxGeometry y="116" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" style="edgeStyle=none;html=1;endArrow=none;endFill=0;" edge="1" parent="1" source="27" target="16">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="DetalleNota" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="690" y="250" width="220" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="id: int&lt;br&gt;esudiante: Estudiante&lt;br&gt;nota1: float&lt;br&gt;nota2: float&lt;br&gt;recuperacion: float&lt;br&gt;observacion: str" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="27">
+                    <mxGeometry y="26" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="27">
+                    <mxGeometry y="126" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="34" value="Nivel" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="500" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="35" value="id: int&lt;br&gt;nivel: NIvel&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="34">
+                    <mxGeometry y="26" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="34">
+                    <mxGeometry y="96" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" style="edgeStyle=none;html=1;entryX=0.541;entryY=-0.015;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=diamondThin;endFill=0;" edge="1" parent="1" source="22" target="34">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="Estudiante" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="680" y="500" width="220" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="id: int&lt;br&gt;nombre: str&lt;br&gt;fecha_creacion: date&lt;br&gt;active: bool" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="38">
+                    <mxGeometry y="26" width="220" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="rounded=0;whiteSpace=wrap;html=1;sketch=0;strokeColor=default;fillColor=none;gradientColor=default;align=left;" vertex="1" parent="38">
+                    <mxGeometry y="96" width="220" height="4" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" style="edgeStyle=none;html=1;entryX=0.541;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;endArrow=none;endFill=0;" edge="1" parent="1" source="28" target="38">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
