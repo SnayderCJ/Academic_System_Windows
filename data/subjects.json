@@ -1,1 +1,23 @@
-[{"_id": 1, "_descripcion": "Calculo", "_nivel": 1, "_fecha_creacion": "2024-09-11", "_active": true}, {"_id": 2, "_descripcion": "Tecnica de Programacion", "_nivel": 2, "_fecha_creacion": "2024-09-11", "_active": true}, {"_id": 3, "_descripcion": "Estructura de Datos", "_nivel": 3, "_fecha_creacion": "2024-09-11", "_active": true}]
+[
+    {
+        "_id": 1,
+        "_descripcion": "Calculo",
+        "_nivel": 1,
+        "_fecha_creacion": "2024-09-11",
+        "_active": true
+    },
+    {
+        "_id": 2,
+        "_descripcion": "Tecnica de Programacion",
+        "_nivel": 2,
+        "_fecha_creacion": "2024-09-11",
+        "_active": true
+    },
+    {
+        "_id": 3,
+        "_descripcion": "Estructura de Datos",
+        "_nivel": 3,
+        "_fecha_creacion": "2024-09-11",
+        "_active": true
+    }
+]

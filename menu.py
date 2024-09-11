@@ -6,6 +6,8 @@ from crudLevel import CrudLevel
 from crudSubjects import CrudSubjects
 from crudGrades import CrudGrades
 from crudPeriodo import CrudPeriodo
+from crudTesis import CrudTesis
+from crudTemaTesis import CrudTemaDeTesis
 from clsJson import JsonFile
 from datetime import date
 from components import Valida, Menu
@@ -23,8 +25,10 @@ while opc != '7':
         "3) Asignaturas", 
         "4) Niveles", 
         "5) Periodos",
-        "6) Notas", 
-        "7) Salir"
+        "6) Notas",
+        "7) Tema De Tesis",
+        "8) Tesis", 
+        "9) Salir"
     ]) 
     opc = menu_main.menu()
 
@@ -130,8 +134,41 @@ while opc != '7':
                 crud.consult()
             print("Regresando al menu principal")
 
+    elif opc == '7':  # Menú de Tema de Tesis
+        opc5 = ''
+        while opc5 != '5':
+            borrarPantalla()
+            menu_tematesis = Menu("Menu Tema de Tesis", [f"{cyan_color}1) Crear", "2) Actualizar", "3) Eliminar", "4) Consultar", "5) Salir"])
+            opc5 = menu_tematesis.menu() 
+            crud = CrudTemaDeTesis()
+            if opc5 == '1':
+                crud.create()
+            elif opc5 == '2':
+                crud.update()
+            elif opc5 == '3':
+                crud.delete()
+            elif opc5 == '4':
+                crud.consult()
+            print("Regresando al menu principal")
 
-    elif opc == '7':  # Opción para salir
+    elif opc == '8':  # Menú de Tema de Tesis
+        opc5 = ''
+        while opc5 != '5':
+            borrarPantalla()
+            menu_tesis = Menu("Menu Tema de Tesis", [f"{cyan_color}1) Crear", "2) Actualizar", "3) Eliminar", "4) Consultar", "5) Salir"])
+            opc5 = menu_tesis.menu() 
+            crud = CrudTesis()
+            if opc5 == '1':
+                crud.create()
+            elif opc5 == '2':
+                crud.update()
+            elif opc5 == '3':
+                crud.delete()
+            elif opc5 == '4':
+                crud.consult()
+            print("Regresando al menu principal")
+
+    elif opc == '9':  # Opción para salir
         break
 
 borrarPantalla()
