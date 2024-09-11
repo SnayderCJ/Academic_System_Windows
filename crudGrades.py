@@ -13,7 +13,7 @@ import time
 
 class CrudGrades(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f'{path}/data/grades.json')
+        self.json_file = JsonFile(f'{path}\data\grades.json')
         self.valida = Valida()
 
     def create(self):
@@ -30,9 +30,9 @@ class CrudGrades(Icrud):
             id = 1
 
         # Obtener periodo, profesor y asignatura, asegúrate de validar que existan
-        periodos_data = JsonFile(f'{path}/data/periods.json').read()
-        profesores_data = JsonFile(f'{path}/data/teachers.json').read()
-        asignaturas_data = JsonFile(f'{path}/data/subjects.json').read()
+        periodos_data = JsonFile(f'{path}\data\periods.json').read()
+        profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+        asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
         # Mostrar periodos disponibles (solo los activos)
         borrarPantalla()
@@ -80,7 +80,7 @@ class CrudGrades(Icrud):
                 print(f"{yellow_color}{' Asignatura no encontrado o inactivo. Intente de nuevo. '.center(80)}{reset_color}")
 
         # Obtener todos los estudiantes desde el archivo students.json
-        estudiantes_data = JsonFile(f'{path}/data/students.json').read()
+        estudiantes_data = JsonFile(f'{path}\data\students.json').read()
 
         
         # Crear la instancia de Nota, almacenando solo los IDs
@@ -140,9 +140,9 @@ class CrudGrades(Icrud):
 
         if grade_dict:
             # Obtener periodo, profesor y asignatura, asegúrate de validar que existan
-            periodos_data = JsonFile(f'{path}/data/periods.json').read()
-            profesores_data = JsonFile(f'{path}/data/teachers.json').read()
-            asignaturas_data = JsonFile(f'{path}/data/subjects.json').read()
+            periodos_data = JsonFile(f'{path}\data\periods.json').read()
+            profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+            asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
 
             # Mostrar periodos disponibles (solo los activos)
@@ -191,7 +191,7 @@ class CrudGrades(Icrud):
                     print(f"{yellow_color}{' Asignatura no encontrado o inactivo. Intente de nuevo. '.center(80)}{reset_color}")
 
             # Obtener todos los estudiantes desde el archivo students.json
-            estudiantes_data = JsonFile(f'{path}/data/students.json').read()
+            estudiantes_data = JsonFile(f'{path}\data\students.json').read()
 
             # Actualizar la instancia de Nota, almacenando solo los IDs
             nota_actualizada = Nota(grade_dict['_id'], 
@@ -274,9 +274,9 @@ class CrudGrades(Icrud):
             return
 
         # Obtener datos de periodos, profesores y asignaturas para mostrar nombres en lugar de IDs
-        periodos_data = JsonFile(f'{path}/data/periods.json').read()
-        profesores_data = JsonFile(f'{path}/data/teachers.json').read()
-        asignaturas_data = JsonFile(f'{path}/data/subjects.json').read()
+        periodos_data = JsonFile(f'{path}\data\periods.json').read()
+        profesores_data = JsonFile(f'{path}\data\teachers.json').read()
+        asignaturas_data = JsonFile(f'{path}\data\subjects.json').read()
 
         while True:
             print(f"{cyan_color}\n1. Listar todos los registros de calificaciones")
@@ -291,7 +291,7 @@ class CrudGrades(Icrud):
                     print(f'{cyan_color} Periodo:  {grade_dict['_periodo_id']}  Profesor: {grade_dict['_profesor_id']}  Asignatura: {grade_dict['_asignatura_id']} {reset_color}')
 
                     for detalle in grade_dict['_detalleNota']:
-                        estudiantes_data = JsonFile(f'{path}/data/students.json').read()
+                        estudiantes_data = JsonFile(f'{path}\data\students.json').read()
                         estudiante_data = next((s for s in estudiantes_data if s['_cedula'] == detalle['_estudiante']['_cedula']), None)  # Corrección aquí
                         if estudiante_data:
                             nombre_estudiante = estudiante_data['_nombre'] + " " + estudiante_data['_apellido']
@@ -315,7 +315,7 @@ class CrudGrades(Icrud):
                 if grade_dict:
                     print(f"\nID: {grade_dict['_id']}, Periodo: {grade_dict['_periodo_id']}, Profesor: {grade_dict['_profesor_id']}, Asignatura: {grade_dict['_asignatura_id']}")
                     for detalle in grade_dict['_detalleNota']:
-                        estudiantes_data = JsonFile(f'{path}/data/students.json').read()
+                        estudiantes_data = JsonFile(f'{path}\data\students.json').read()
                         estudiante_data = next((s for s in estudiantes_data if s['_cedula'] == detalle['_estudiante']['_cedula']), None)  
                         if estudiante_data:
                             nombre_estudiante = estudiante_data['_nombre'] + " " + estudiante_data['_apellido']

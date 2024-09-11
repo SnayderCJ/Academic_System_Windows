@@ -9,7 +9,7 @@ from datetime import datetime
 
 class CrudStudents(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f"{path}/data/students.json") # Modifica la ruta del archivo JSON
+        self.json_file = JsonFile(f"{path}\data\students.json") # Modifica la ruta del archivo JSON
         self.valida = Valida()
 
     def create(self):

@@ -8,7 +8,7 @@ import time
 
 class CrudLevel(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f'{path}/data/levels.json')
+        self.json_file = JsonFile(f'{path}\data\levels.json')
         self.valida = Valida()
 
         self.niveles_predefinidos = [

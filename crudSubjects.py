@@ -9,8 +9,8 @@ import time
 
 class CrudSubjects(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f'{path}/data/subjects.json')
-        self.niveles_json_file = JsonFile(f'{path}/data/levels.json')
+        self.json_file = JsonFile(f'{path}\data\subjects.json')
+        self.niveles_json_file = JsonFile(f'{path}\data\levels.json')
         self.valida = Valida()
 
     def create(self):

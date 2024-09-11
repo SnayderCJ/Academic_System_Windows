@@ -15,7 +15,7 @@ def gotoxy(x,y):
     print("%c[%d;%df"%(0x1B,y,x),end="")
 
 def borrarPantalla():
-    os.system("clear") # en windows es cls 
+    os.system("cls") # en windows es cls 
 
 def linea(longitud, color):
     print(f"{color}{longitud * '-'}{reset_color}")

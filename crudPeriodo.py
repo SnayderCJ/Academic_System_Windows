@@ -8,7 +8,7 @@ import time
 
 class CrudPeriodo(Icrud):
     def __init__(self):
-        self.json_file = JsonFile(f'{path}/data/periods.json')
+        self.json_file = JsonFile(f'{path}\data\periods.json')
         self.valida = Valida()
 
     def create(self):
@@ -28,7 +28,7 @@ class CrudPeriodo(Icrud):
 
         nombre_periodo = input(f"{purple_color}Ingrese el nombre del periodo académico: {reset_color}")
         while not nombre_periodo:
-            print(f"{red_color}El nombre del periodo no puede estar vacío. Intente de nuevo.{reset_color}")
+            print(f"{red_color}El nombre dl periodo no puede estar vacío. Intente de nuevo.{reset_color}")
             nombre_periodo = input(f"{purple_color}Ingrese el nombre del periodo académico: {reset_color}")
 
         nuevo_periodo = Periodo(id, nombre_periodo, True)
