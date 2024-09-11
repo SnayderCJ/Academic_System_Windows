@@ -1,0 +1,5 @@
+# Archivos y directorios Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
